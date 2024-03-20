@@ -1,0 +1,52 @@
+﻿@using StronglyTypedViewsMultipleModels.Models
+
+@* making view strongly typed and receiving both person and product data at same time*@
+@model PersonAndProductWrapperModel
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person And Product</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-content">
+        <h1>Person And Product</h1>
+
+        @* Here we would like to print Person Data as well as Product Details(two different models at same time in same view) *@
+        <div class="box w-100">
+            <h3>Person</h3>
+            <table class="table w-50">
+                <tbody>
+                    <tr>
+                        <td>Person Name</td>
+                        <td>@Model.PersonData.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>@Model.PersonData.PersonGender</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="box w-100">
+            <h3>Product</h3>
+            <table class="table w-50">
+                <tbody>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>@Model.ProductData.ProductId</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>@Model.ProductData.ProductName</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

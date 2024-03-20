@@ -1,0 +1,62 @@
+﻿@*importing Models folder*@
+@using StronglyTypedViewsMultipleModels.Models
+
+@* adding model for your view *@
+@model List<Person>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    @* demonstrating Razor Expression *@
+    @* <title>@appTitle</title> *@
+    <title>@ViewData["appTitle"]</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-content">
+        <h1>Welcome</h1>
+
+        <p><strong>Current Date and time is: </strong>@ViewData["CurrentTime"]</p>
+
+        @* @{
+        List<Person>? people = (List<Person>?)ViewData["people"];
+        }
+        *@
+        <h2>Demonstrating strongly typed views Loop</h2>
+        @foreach (Person person in Model)
+        {
+            <div class="box float-left w-50">
+                <h3>@person.Name</h3>
+
+                @* We want to show Gender and DOB as table *@
+                <table class="table w-100">
+                    <tbody>
+                        <tr>
+                            <td>Gender</td>
+                            <td>@person.PersonGender</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            @* <td>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</td> *@
+                            <td>@person.DateOfBirth?.ToString("MM/dd/yyyy")</td>
+                        </tr>
+                    </tbody>
+                </table>
+                @* <span>, </span>
+            <span>@person.PersonGender</span>
+            @if (person.DateOfBirth != null)
+            {
+            <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
+            } *@
+
+                <a href="/person-details/@person.Name">Details</a>
+            </div>
+        }
+        <div>
+            <a href="/person-with-product">Person with Product</a>
+        </div>
+    </div>
+</body>
+</html>

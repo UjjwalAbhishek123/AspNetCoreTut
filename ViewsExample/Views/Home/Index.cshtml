@@ -1,0 +1,119 @@
+﻿@*importing Models folder*@
+@using ViewsExample.Models
+
+@{
+    // string appTitle = "Asp.Net Core Application Demo"; -> moved to controller
+
+    //For Demosntration of Razor-Foreach and for loop, creating List of people of Person type
+
+    // List<Person> people = new List<Person>()
+    // {
+    //     new Person(){Name = "John", DateOfBirth = DateTime.Parse("2000-05-06"), PersonGender = Gender.Male},
+    //     new Person(){Name = "Linda", DateOfBirth = DateTime.Parse("2005-01-09"), PersonGender = Gender.Female},
+    //     new Person(){Name = "Susan", DateOfBirth = DateTime.Parse("2008-07-12"), PersonGender = Gender.Other}
+    // };
+
+    // for demonstration of If-else and Switch statements
+    // Person person = new Person() { Name = "John", DateOfBirth = null, PersonGender = Gender.Male };
+    //Convert.ToDateTime("2000-07-01") };
+
+}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        @* demonstrating Razor Expression *@
+        @* <title>@appTitle</title> *@
+        <title>@ViewData["appTitle"]</title>
+        <meta charset="utf-8" />
+        <link href="~/StyleSheet.css" rel="stylesheet" />
+    </head>
+    <body>
+    <div class="page-content">
+        <h1>Welcome</h1>
+
+        <p><strong>Current Date and time is: </strong>@ViewData["CurrentTime"]</p>
+
+        @* @{
+            List<Person>? people = (List<Person>?)ViewData["people"];
+        }
+ *@
+        <h2>Demonstrating Razor Foreach Loop</h2>
+            @foreach (Person person in ViewBag.people)
+            {
+                <div class="box float-left w-50">
+                    <h3>@person.Name</h3>
+
+                    @* We want to show Gender and DOB as table *@
+                    <table class="table w-100">
+                        <tbody>
+                            <tr>
+                                <td>Gender</td>
+                                <td>@person.PersonGender</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth</td>
+                                @* <td>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</td> *@
+                                <td>@person.DateOfBirth?.ToString("MM/dd/yyyy")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    @* <span>, </span>
+                    <span>@person.PersonGender</span>
+                    @if (person.DateOfBirth != null)
+                    {
+                        <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
+                    } *@
+                </div>
+            }
+
+        @* <h2>Demonstrating Razor For Loop</h2>
+        @for (int i = 0; i < 2; i++)
+        {
+        Person person = people[i];
+        <div>
+        @person.Name
+        <span>, </span>
+        <span>@person.PersonGender</span>
+        @if (person.DateOfBirth != null)
+        {
+        <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
+        }
+        </div>
+        } *@
+
+        @* <h2>For demonstration of If-Else</h2> *@
+
+        @* <h3>Hello @person.Name</h3>
+        @if (person.DateOfBirth.HasValue)
+        {
+        double age = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays / 365.25);
+        <h3>@age years old</h3>
+        } *@
+        @* else
+        {
+        <h3>Date of birth is unknown</h3>
+        } *@
+
+        @* <h2>For demonstration of Switch Case</h2> *@
+
+        @* @switch (person.PersonGender)
+        {
+        case Gender.Male:
+        <p>November 19 is International Men's Day</p>
+        ;
+        break;
+
+        case Gender.Female:
+        <p>March 8 is International Women's Day</p>
+        ;
+        break;
+
+        case Gender.Other:
+        <p>March 31 is International Transgender's Day</p>
+        ; break;
+        } *@
+    </div>
+</body>
+</html>
