@@ -31,7 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewsExample", "ViewsExampl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StronglyTypedViewsExample", "StronglyTypedViewsExample\StronglyTypedViewsExample.csproj", "{0D923CD8-29B0-453F-8A4F-0DCF806A06CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyTypedViewsMultipleModels", "StronglyTypedViewsMultipleModels\StronglyTypedViewsMultipleModels.csproj", "{FB55A413-112C-49E0-9794-D1A73A27F37C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StronglyTypedViewsMultipleModels", "StronglyTypedViewsMultipleModels\StronglyTypedViewsMultipleModels.csproj", "{FB55A413-112C-49E0-9794-D1A73A27F37C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment Solutions", "Assignment Solutions", "{771D3CBC-0A8C-4D27-9C2E-A5F16150E741}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Razor View - WeatherApp", "Razor View - WeatherApp", "{671A0C6D-D76B-4752-BA4C-A08CE747A999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,9 +105,17 @@ Global
 		{FB55A413-112C-49E0-9794-D1A73A27F37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB55A413-112C-49E0-9794-D1A73A27F37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB55A413-112C-49E0-9794-D1A73A27F37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{671A0C6D-D76B-4752-BA4C-A08CE747A999} = {771D3CBC-0A8C-4D27-9C2E-A5F16150E741}
+		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45} = {671A0C6D-D76B-4752-BA4C-A08CE747A999}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {283030B8-9ED1-4580-A43D-85E33D41FFDF}
