@@ -1,0 +1,19 @@
+﻿<h1>Home</h1>
+
+@*
+    It is a Tag-Helper
+    It copies all the code form _ListPartialView.cshtml here
+*@
+<partial name="_ListPartialView"></partial>
+
+@{
+    ViewData["ListTitle"] = "Countries";
+    ViewData["ListItems"] = new List<string>()
+    {
+        "India", "USA", "Canada", "Japan", "Germany"
+    };
+}
+
+<div class="box">
+    <partial name="_ListPartialView"></partial>
+</div>

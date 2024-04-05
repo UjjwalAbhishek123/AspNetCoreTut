@@ -1,6 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
-//adding controller to service
+//adding controller with views as service
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
