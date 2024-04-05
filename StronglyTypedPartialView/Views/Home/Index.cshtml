@@ -1,0 +1,16 @@
+﻿<h1>Home</h1>
+
+@{
+    ListModel listModel = new ListModel();
+    listModel.ListTitle = "Countries";
+    listModel.ListItems = new List<string>()
+    {
+        "USA", "India", "Japan", "Canada", "Germany"
+    };
+}
+
+@*
+    It is a Tag-Helper
+    It copies all the code form _ListPartialView.cshtml here
+*@
+<partial name="_ListPartialView" model="listModel"></partial>
