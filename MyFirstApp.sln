@@ -43,9 +43,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LayoutViewExample", "Layout
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartialViewsExample", "PartialViewsExample\PartialViewsExample.csproj", "{3CD6F588-97E0-46A4-8E6D-4FA861F0D968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialViewWithViewData", "PartialViewWithViewData\PartialViewWithViewData.csproj", "{E8D6E2CD-4FC6-4C58-856A-BB9805535DFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartialViewWithViewData", "PartialViewWithViewData\PartialViewWithViewData.csproj", "{E8D6E2CD-4FC6-4C58-856A-BB9805535DFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyTypedPartialView", "StronglyTypedPartialView\StronglyTypedPartialView.csproj", "{B007EB11-B834-4EA1-9143-CAFA651CC482}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StronglyTypedPartialView", "StronglyTypedPartialView\StronglyTypedPartialView.csproj", "{B007EB11-B834-4EA1-9143-CAFA651CC482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialViewResultExample", "PartialViewResultExample\PartialViewResultExample.csproj", "{6C77A783-3B34-4655-8771-1C9AB9E7B57A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,10 @@ Global
 		{B007EB11-B834-4EA1-9143-CAFA651CC482}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B007EB11-B834-4EA1-9143-CAFA651CC482}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B007EB11-B834-4EA1-9143-CAFA651CC482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C77A783-3B34-4655-8771-1C9AB9E7B57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C77A783-3B34-4655-8771-1C9AB9E7B57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C77A783-3B34-4655-8771-1C9AB9E7B57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C77A783-3B34-4655-8771-1C9AB9E7B57A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

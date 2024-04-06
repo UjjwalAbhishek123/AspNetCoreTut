@@ -1,0 +1,23 @@
+﻿<h1>Home</h1>
+
+<button class="button button-blue-back" type="button" id="button-load">Load Programming Languages</button>
+
+@* Writing the Javascript code here *@
+
+<div class="box programming-language-content">
+
+</div>
+
+<script>
+    // access the button using document.querySelector, and then chain the EventListener
+    document.querySelector("#button-load").addEventListener("click", async function () {
+        //making asynchronous request for programmingLanguages method
+        var response = await fetch("programming-languages");
+
+        //reading the response from server
+        var languages = await response.text();
+
+        //We want to load the programming languages in the above div tag box, so select the class in div and pass the response of languages variable
+        document.querySelector(".programming-language-content").innerHTML = languages;
+    });
+</script>
