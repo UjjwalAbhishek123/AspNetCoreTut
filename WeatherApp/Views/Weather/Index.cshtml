@@ -2,16 +2,18 @@
 
 @{
     ViewBag.Title = "Weather";
-    //local function: get css class based on ranges of fahrenheit value as instructed in the requirement
-    string GetCssClassByFahrenheit(int TemperatureFahrenheit)
-    {
-        return TemperatureFahrenheit switch
-        {
-            (< 44) => "blue-back",
-            (>= 44) and (< 75) => "green-back",
-            (>= 75) => "orange-back"
-        };
-    }
+    // //local function: get css class based on ranges of fahrenheit value as instructed in the requirement
+    // string GetCssClassByFahrenheit(int TemperatureFahrenheit)
+    // {
+    //     return TemperatureFahrenheit switch
+    //     {
+    //         (< 44) => "blue-back",
+    //         (>= 44) and (< 75) => "green-back",
+    //         (>= 75) => "orange-back"
+    //     };
+    // }
+
+    //This complete portion is moved to _CityPartial.cshtml
 }
 
 
@@ -19,7 +21,12 @@
     <div class="flex">
         @foreach (CityWeather city in Model)
         {
-            <div class="box cursor-pointer w-30 @GetCssClassByFahrenheit(city.TemperatureFahrenheit)">
+            //for printing the city details
+            <partial name="_CityPartial" model="city" />
+
+            //Moved below code to _CityPartial.cshtml
+
+            @* <div class="box cursor-pointer w-30 @GetCssClassByFahrenheit(city.TemperatureFahrenheit)">
                 <div class="flex-borderless">
                     <div class="w-50">
                         <h2>@city.CityName</h2>
@@ -31,7 +38,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> *@
         }
 
     </div>
