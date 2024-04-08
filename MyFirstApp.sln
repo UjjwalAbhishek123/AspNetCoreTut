@@ -37,8 +37,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment Solutions", "Ass
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Razor View - WeatherApp", "Razor View - WeatherApp", "{671A0C6D-D76B-4752-BA4C-A08CE747A999}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LayoutViewExample", "LayoutViewExample\LayoutViewExample.csproj", "{0578D8C0-445C-4093-97B3-519522D5D8B9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartialViewsExample", "PartialViewsExample\PartialViewsExample.csproj", "{3CD6F588-97E0-46A4-8E6D-4FA861F0D968}"
@@ -47,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartialViewWithViewData", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StronglyTypedPartialView", "StronglyTypedPartialView\StronglyTypedPartialView.csproj", "{B007EB11-B834-4EA1-9143-CAFA651CC482}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialViewResultExample", "PartialViewResultExample\PartialViewResultExample.csproj", "{6C77A783-3B34-4655-8771-1C9AB9E7B57A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartialViewResultExample", "PartialViewResultExample\PartialViewResultExample.csproj", "{6C77A783-3B34-4655-8771-1C9AB9E7B57A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAppNew", "WeatherAppNew\WeatherAppNew.csproj", "{C51CD166-7739-4435-A998-B7055E42C921}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,10 +115,6 @@ Global
 		{FB55A413-112C-49E0-9794-D1A73A27F37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB55A413-112C-49E0-9794-D1A73A27F37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB55A413-112C-49E0-9794-D1A73A27F37C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0578D8C0-445C-4093-97B3-519522D5D8B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0578D8C0-445C-4093-97B3-519522D5D8B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0578D8C0-445C-4093-97B3-519522D5D8B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -139,13 +135,17 @@ Global
 		{6C77A783-3B34-4655-8771-1C9AB9E7B57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C77A783-3B34-4655-8771-1C9AB9E7B57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C77A783-3B34-4655-8771-1C9AB9E7B57A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C51CD166-7739-4435-A998-B7055E42C921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C51CD166-7739-4435-A998-B7055E42C921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C51CD166-7739-4435-A998-B7055E42C921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C51CD166-7739-4435-A998-B7055E42C921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{671A0C6D-D76B-4752-BA4C-A08CE747A999} = {771D3CBC-0A8C-4D27-9C2E-A5F16150E741}
-		{9A86DB2B-D6A8-4529-89B0-FA6551F9EA45} = {671A0C6D-D76B-4752-BA4C-A08CE747A999}
+		{C51CD166-7739-4435-A998-B7055E42C921} = {671A0C6D-D76B-4752-BA4C-A08CE747A999}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {283030B8-9ED1-4580-A43D-85E33D41FFDF}

@@ -1,10 +1,6 @@
-﻿@*
-    Moving the local function GetCssClassByFahrenheit, and the loop portion that prints the CityName, DateAndTime, etc of index.cshtml page here
-*@
+﻿@model CityWeather
 
- @model CityWeather
-
- @{
+@{
     //local function: get css class based on ranges of fahrenheit value as instructed in the requirement
     string GetCssClassByFahrenheit(int TemperatureFahrenheit)
     {
@@ -15,7 +11,7 @@
             (>= 75) => "orange-back"
         };
     }
- }
+}
 
 <div class="box cursor-pointer w-30 @GetCssClassByFahrenheit(Model.TemperatureFahrenheit)">
     <div class="flex-borderless">
@@ -28,4 +24,5 @@
             <h1 class="margin-left">@Model.TemperatureFahrenheit <sup class="text-grey">&#8457</sup></h1>
         </div>
     </div>
+
 </div>
