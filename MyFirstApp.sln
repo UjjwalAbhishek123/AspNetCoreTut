@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherAppNew", "WeatherApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewComponentExample", "ViewComponentExample\ViewComponentExample.csproj", "{DAE67900-413B-47F1-A8FD-9FEEA642EA46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewComponentWithViewDataExample", "ViewComponentWithViewDataExample\ViewComponentWithViewDataExample.csproj", "{B151EBC1-21D9-4C6F-A7DA-80286FB0A940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewComponentWithViewDataExample", "ViewComponentWithViewDataExample\ViewComponentWithViewDataExample.csproj", "{B151EBC1-21D9-4C6F-A7DA-80286FB0A940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewComponentResultExample", "ViewComponentResultExample\ViewComponentResultExample.csproj", "{F27F9EED-5AFD-48CF-9766-FD43BAD8C14C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +153,10 @@ Global
 		{B151EBC1-21D9-4C6F-A7DA-80286FB0A940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B151EBC1-21D9-4C6F-A7DA-80286FB0A940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B151EBC1-21D9-4C6F-A7DA-80286FB0A940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27F9EED-5AFD-48CF-9766-FD43BAD8C14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27F9EED-5AFD-48CF-9766-FD43BAD8C14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27F9EED-5AFD-48CF-9766-FD43BAD8C14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27F9EED-5AFD-48CF-9766-FD43BAD8C14C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
