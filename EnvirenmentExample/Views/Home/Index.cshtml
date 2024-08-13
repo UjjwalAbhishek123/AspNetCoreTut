@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<h1>Home</h1>
+
+<div class="box">
+    Environment: @ViewBag.CurrentEnvironment
+</div>
+
+@* Here we want to show the button only when the working environment is Development else not *@
+<environment include="Development">
+    <button class="button button-blue-back">Button For Dev env</button>
+</environment>
