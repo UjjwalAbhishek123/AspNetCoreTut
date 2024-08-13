@@ -7,8 +7,12 @@
     <div class="flex">
         @foreach (CityWeather city in Model)
         {
+            //for partial view it is applicable
             @* <partial name="_CityPartial" model="city" /> *@
-            @await Html.PartialAsync("_CityPartial", city)
+            @* @await Html.PartialAsync("_CityPartial", city) *@
+
+            //for ViewComponent, we can invoke it as:-
+            @await Component.InvokeAsync("City", new { city = city })
         }
 
     </div>
