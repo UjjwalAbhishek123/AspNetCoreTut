@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DependencyInjection2ServiceContracts\DependencyInjection2ServiceContracts.csproj" />
+    <ProjectReference Include="..\DependencyInjection2Service\DependencyInjection2Service.csproj" />
+  </ItemGroup>
+
+</Project>
