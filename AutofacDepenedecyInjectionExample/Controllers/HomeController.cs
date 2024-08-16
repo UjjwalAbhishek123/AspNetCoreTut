@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using DependencyInjection2ServiceContracts;
+using AutofacDependencyInjectionServiceContracts;
 
 namespace DependencyInjection2Example.Controllers
 {
@@ -17,7 +17,7 @@ namespace DependencyInjection2Example.Controllers
 
         //constructor for object creation of ICitiesService class, which will be done by IoC Container automatically
         //Eg. of Constructor Injection
-        public HomeController(ICitiesService citiesService1, ICitiesService citiesService2, ICitiesService citiesService3, IServiceScopeFactory serviceScopeFactory)
+        public HomeController(ICitiesService citiesService1, ICitiesService citiesService2, ICitiesService citiesService3)
         {
             //create object of CitiesService class
             //here we will use Inversion of Control for object creation using Dependency Injection
@@ -25,8 +25,6 @@ namespace DependencyInjection2Example.Controllers
             _citiesService2 = citiesService2;
             _citiesService3 = citiesService3;
 
-            //for child scopes
-            _serviceScopeFactory = serviceScopeFactory;
         }
 
         [Route("/")]

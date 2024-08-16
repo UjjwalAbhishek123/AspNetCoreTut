@@ -1,4 +1,4 @@
-﻿namespace DependencyInjection2ServiceContracts
+﻿namespace AutofacDependencyInjectionServiceContracts
 {
     public interface ICitiesService
     {

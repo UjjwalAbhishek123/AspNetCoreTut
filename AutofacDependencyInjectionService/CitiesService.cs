@@ -1,6 +1,6 @@
-﻿using DependencyInjection2ServiceContracts;
+﻿using AutofacDependencyInjectionServiceContracts;
 
-namespace DependencyInjection2Service
+namespace AutofacDependencyInjectionService
 {
     public class CitiesService : ICitiesService, IDisposable
     {

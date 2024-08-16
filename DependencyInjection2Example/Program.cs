@@ -9,11 +9,16 @@ builder.Services.AddControllersWithViews();
 //add service through IoC Container
 //builder.Services => acts as IoC Container
 //it tells that, whenever some class asks for ICitiesService object, create and supply object of CitiesService
-builder.Services.Add(new ServiceDescriptor(
-    typeof(ICitiesService),
-    typeof(CitiesService),
-    ServiceLifetime.Transient
-    ));
+//builder.Services.Add(new ServiceDescriptor(
+//    typeof(ICitiesService),
+//    typeof(CitiesService),
+//    ServiceLifetime.Scoped
+//    ));
+
+//new way of registering Service
+builder.Services.AddScoped<ICitiesService, CitiesService>();
+//builder.Services.AddTransient<ICitiesService, CitiesService>();
+//builder.Services.AddSingleton<ICitiesService, CitiesService>();
 
 var app = builder.Build();
 
