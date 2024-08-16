@@ -1,4 +1,4 @@
-﻿@using DependencyInjection2ServiceContracts
+﻿@using AutofacDependencyInjectionServiceContracts
 @model IEnumerable<string>
 @inject ICitiesService citiesServiceInView
 
@@ -10,7 +10,7 @@
 
 @* For injecting Service in View *@
 @{
-    List<string> citiesFromServiceInView =  citiesServiceInView.GetCities();
+    List<string> citiesFromServiceInView = citiesServiceInView.GetCities();
 }
 
 <h3>injecting service in View Example</h3>
@@ -23,7 +23,7 @@
 <br></br>
 <h3>usual way displaying list through Model</h3>
 <ul class="list">
-    @foreach(var city in Model)
+    @foreach (var city in Model)
     {
         <li>@city</li>
     }
@@ -33,6 +33,7 @@
     <div>@ViewBag.Instance_Id_CitiesService_1</div>
     <div>@ViewBag.Instance_Id_CitiesService_2</div>
     <div>@ViewBag.Instance_Id_CitiesService_3</div>
+    <div>@citiesServiceInView.ServiceInstanceId</div>
 </div>
 
 <div class="box">
