@@ -1,0 +1,51 @@
+﻿@model HtmlHelperExample3.Models.Company;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Home Page</h1>
+
+<h3>Demonstrating RadioButton() method</h3>
+<!-- Demonstrating RadioButton() Html helper -->
+
+<div class="form-group">
+    <label class="form-check-label">
+        @Html.RadioButton("Gender", "Male", false, new { @class = "form-check-input"})
+        Male
+
+        <!-- 
+            Gender => Name attribute, must be same for allother radio button input
+            Male => value attribute, value that will be sent when user selects the radio button
+            false => tells no radio button is selected
+        -->
+    </label>
+</div>
+
+<div class="form-group">
+    <label class="form-check-label">
+        @Html.RadioButton("Gender", "Female", false, new { @class = "form-check-input" })
+        Female
+    </label>
+</div>
+
+<h3>Demonstrating RadioButtonFor() method</h3>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @foreach(var department in Model.Departments())
+        {
+            <div class="form-check">
+                <label class="form-check-label">
+                    @Html.RadioButtonFor(m => m.SelectedDepartment, department.DeptId, new { @class = "form-check-input" })
+                    @department.DeptName
+                </label>
+            </div>
+        }
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="submit" class="btn btn-primary"/>
+    </div>
+}
