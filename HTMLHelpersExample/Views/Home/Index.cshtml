@@ -1,0 +1,45 @@
+﻿@model HTMLHelpersExample.Models.Employee
+
+@{
+    ViewData["Title"] = "Home Page";
+
+    //hardcoded DateTime value
+    // var hardcodedDate = new DateTime(2024, 8, 20);
+
+    // //format the DateTime value to specific format
+    // var formattedDate = hardcodedDate.ToString("yyyy-MM-dd");
+}
+
+<h1>Home Page</h1>
+
+@* example with TextBox()*@
+@* @Html.TextBox("DateOfBirth", hardcodedDate, formattedDate, new { @class = "form-control", placeholder = "Enter your birth date" }) *@
+
+@* example with TextBoxFor()*@
+<label for="EmployeeName">Employee Name: </label>
+@Html.TextBoxFor(m => m.EmpName, new { @class = "form-control", placeholder = "Enter your Name" })
+<br>
+
+<label for="Gender">Gender: </label>
+@Html.TextBoxFor(m => m.Gender, new { @class = "form-control", placeholder = "Enter your Gender" })
+<br>
+
+<label for="City">City: </label>
+@Html.TextBoxFor(m => m.City, new { @class = "form-control", placeholder = "Enter your City" })
+<br>
+
+<label for="Salary">Salary: </label>
+@Html.TextBoxFor(m => m.Salary, new { @class = "form-control", placeholder = "Enter your Salary" })
+<br>
+
+<label for="DateOfBirth">Date of Birth: </label>
+@Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control", placeholder = "Enter your Date of Birth" })
+<br>
+
+@* Example for Textarea*@
+<label for="Address">Address</label>
+@Html.TextArea("Address", null, new { @class = "form-control" })
+<br>
+
+<label for="AddressNew">Address New</label>
+@Html.TextAreaFor(m => m.Address, new { @class = "form-control" })

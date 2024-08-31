@@ -67,11 +67,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjection2Service
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjection2Service", "DependencyInjection2Service\DependencyInjection2Service.csproj", "{8B4D4C05-1B47-49EA-B76C-7EC8CF34E3BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacDependencyInjectionExample", "AutofacDependencyInjectionExample\AutofacDependencyInjectionExample.csproj", "{3B56CEF4-CACE-4C5E-A118-760A8B0AF0F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacDependencyInjectionExample", "AutofacDependencyInjectionExample\AutofacDependencyInjectionExample.csproj", "{3B56CEF4-CACE-4C5E-A118-760A8B0AF0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacDependencyInjectionServices", "AutofacDependencyInjectionServices\AutofacDependencyInjectionServices.csproj", "{AC331C4A-C341-4EBC-9218-148B4D8F6CC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacDependencyInjectionServices", "AutofacDependencyInjectionServices\AutofacDependencyInjectionServices.csproj", "{AC331C4A-C341-4EBC-9218-148B4D8F6CC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacDependencyInjectionServiceContracts", "AutofacDependencyInjectionServiceContracts\AutofacDependencyInjectionServiceContracts.csproj", "{1EE11675-3181-458A-B6E9-3DD5C2352EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacDependencyInjectionServiceContracts", "AutofacDependencyInjectionServiceContracts\AutofacDependencyInjectionServiceContracts.csproj", "{1EE11675-3181-458A-B6E9-3DD5C2352EC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLHelpersExample", "HTMLHelpersExample\HTMLHelpersExample.csproj", "{9F1AC1B2-29E4-491D-8024-5026AB33CE05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -211,6 +213,10 @@ Global
 		{1EE11675-3181-458A-B6E9-3DD5C2352EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EE11675-3181-458A-B6E9-3DD5C2352EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EE11675-3181-458A-B6E9-3DD5C2352EC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F1AC1B2-29E4-491D-8024-5026AB33CE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1AC1B2-29E4-491D-8024-5026AB33CE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1AC1B2-29E4-491D-8024-5026AB33CE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1AC1B2-29E4-491D-8024-5026AB33CE05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
