@@ -73,7 +73,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacDependencyInjectionS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacDependencyInjectionServiceContracts", "AutofacDependencyInjectionServiceContracts\AutofacDependencyInjectionServiceContracts.csproj", "{1EE11675-3181-458A-B6E9-3DD5C2352EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLHelpersExample", "HTMLHelpersExample\HTMLHelpersExample.csproj", "{9F1AC1B2-29E4-491D-8024-5026AB33CE05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTMLHelpersExample", "HTMLHelpersExample\HTMLHelpersExample.csproj", "{9F1AC1B2-29E4-491D-8024-5026AB33CE05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlHelpersExample2", "HtmlHelpersExample2\HtmlHelpersExample2.csproj", "{9EFEC2BB-EDA7-4F4F-8BEB-54500E86CA94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -217,6 +219,10 @@ Global
 		{9F1AC1B2-29E4-491D-8024-5026AB33CE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F1AC1B2-29E4-491D-8024-5026AB33CE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F1AC1B2-29E4-491D-8024-5026AB33CE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFEC2BB-EDA7-4F4F-8BEB-54500E86CA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFEC2BB-EDA7-4F4F-8BEB-54500E86CA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFEC2BB-EDA7-4F4F-8BEB-54500E86CA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFEC2BB-EDA7-4F4F-8BEB-54500E86CA94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

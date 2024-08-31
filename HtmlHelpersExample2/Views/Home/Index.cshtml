@@ -1,0 +1,46 @@
+﻿@model HtmlHelpersExample2.Models.Employee;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Home Page DropdownList</h1>
+
+<div class="form-group">
+    <!-- Label for Department Dropdown -->
+    @* <label for="Departments" class="form-label">Select Department</label>
+
+    <!-- Hardcoded Dropdown list values-->
+    @Html.DropDownList("Departments", new List<SelectListItem>
+        {
+            new SelectListItem { Text = "IT", Value = "1", Selected = true },
+            new SelectListItem { Text = "HR", Value = "2" },
+            new SelectListItem { Text = "Payroll", Value = "3"}
+        }, "Select Department", new { @class = "form-control"}) *@
+
+
+    <!-- 
+        Departments => Name of the form element that will be generated
+        new List<SelectlistItem>{...} => List of options for dropdown
+        Text => text displayed to user in dropdown. Eg. IT, HR
+        Value => value that will be submitted when user selects the option
+        SelectDepartment => Default text to show when no option is selected
+
+        HTML o/p =>
+            <select id="Departments" name="Departments" class="form-control">
+        <option value="">Select Department</option>
+        <option value="1" selected="selected">IT</option>
+        <option value="2">HR</option>
+        <option value="3">Payroll</option>
+    </select>
+    -->
+
+    @* accessing the department list from ViewBag*@
+    <label for="Departments" class="form-label">Select Department</label>
+    @Html.DropDownList("Departments", @ViewBag.Departments, "Select Department", new { @class = "form-control"})
+
+    @* Demosntrating DropDownListFor() *@
+
+    <label for="DepartmentID">Select Department</label>
+    @Html.DropDownListFor(emp => emp.DepartmentId, (SelectList)ViewBag.Departments, "Select Department", new { @class = "form-control" })
+</div>
