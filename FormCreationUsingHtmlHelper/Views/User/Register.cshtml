@@ -1,0 +1,94 @@
+﻿@model FormCreationUsingHtmlHelper.Models.UserRegistrationModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">User Registration</h2>
+    <form asp-action="Register" method="post" class="mt-4">
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.LabelFor(m => m.Name, new { @class = "form-label"})
+            </div>
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-label"})
+                @Html.ValidationMessageFor(m => m.Name, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.LabelFor(m => m.Email, new { @class = "form-label"})
+            </div>
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-label"})
+                @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+            </div>
+            <div class="col-md-7">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-label" })
+                @Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.LabelFor(m => m.Address, new { @class = "form-label" })
+            </div>
+            <div class="col-md-7">
+                @Html.TextAreaFor(m => m.Address, new { @class = "form-label", rows = 3 })
+                @Html.ValidationMessageFor(m => m.Address, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.LabelFor(m => m.Gender, new { @class = "form-label" })
+            </div>
+            <div class="col-md-7">
+                @Html.RadioButtonFor(m => m.Gender, "Male") Male
+                @Html.RadioButtonFor(m => m.Gender, "Female", new { @class = "ms-3" }) Female
+                @Html.ValidationMessageFor(m => m.Gender, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.LabelFor(m => m.SelectedCourse, new { @class = "form-label" })
+            </div>
+            <div class="col-md-7">
+                @Html.DropDownListFor(m => m.SelectedCourse, new SelectList(Model.Courses), "Select Course", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.SelectedCourse, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.LabelFor(m => m.SelectedSkills, "Skills", new { @class = "form-label" })
+            </div>
+            <div class="col-md-7">
+                @Html.ListBoxFor(m => m.SelectedSkills, new MultiSelectList(Model.Skills), new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.SelectedSkills, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 d-flex align-items-center">
+                @Html.CheckBoxFor(m => m.RememberMe, new { @class = "form-check-input" })
+            </div>
+            <div class="col-md-7 d-flex align-items-center">
+                @Html.LabelFor(m => m.RememberMe, new { @class = "form-check-label" })
+            </div>
+        </div>
+
+        @Html.HiddenFor(m => m.HiddenField)
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
