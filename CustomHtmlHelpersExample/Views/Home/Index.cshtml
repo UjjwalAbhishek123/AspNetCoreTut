@@ -1,0 +1,56 @@
+﻿@model CustomHtmlHelpersExample.Models.Employee
+
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4 class="mb-0">Employee Details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <label class="col-4"><strong>Employee ID:</strong></label>
+                        <div class="col-8">
+                            <p class="form-control-plaintext mb-0">@Html.DisplayFor(model => model.Id)</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-4"><strong>Full Name:</strong></label>
+                        <div class="col-8">
+                            <p class="form-control-plaintext mb-0">@Html.DisplayFor(model => model.FullName)</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-4"><strong>Designation:</strong></label>
+                        <div class="col-8">
+                            <p class="form-control-plaintext mb-0">@Html.DisplayFor(model => model.Designation)</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-4"><strong>Department:</strong></label>
+                        <div class="col-8">
+                            <p class="form-control-plaintext mb-0">@Html.DisplayFor(model => model.Department)</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-4"><strong>Photo:</strong></label>
+                        @* <div class="col-8">
+
+                            <!-- Using img tag to render image -->
+                            <img src="@Model.Photo" alt="@Model.AlternateText" class="img-thumbnail" style="width: 150px; height: 150px" />
+                        </div> *@
+
+                        <!--using Custom Html Helper -->
+                        <div class="col-8">
+                            @Html.Image(Model.Photo, Model.AlternateText, new { @class = "img-thumbnail", style = "width: 150px; height: 150px;" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
