@@ -1,0 +1,21 @@
+﻿@model IEnumerable<FileModel>
+
+@{
+    ViewData["Title"] = "Show Images";
+}
+
+<h1>Uploaded Images</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        @foreach (var image in Model)
+        {
+            <img src="@Url.Action("GetImages", new { id = image.Id })" width="200" height="200" alt="Image not Available" class="img-fluid"/>
+
+            <form method="post" asp-action="DeleteImage" asp-controller="FileUpload" asp-route-id="@image.Id">
+                <input type="hidden" name="id" value="@image.Id" />
+                <button type="submit" class="text-danger">Delete</button>
+            </form>
+        }
+    </div>
+</div>

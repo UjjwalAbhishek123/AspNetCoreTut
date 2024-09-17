@@ -83,7 +83,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomHtmlHelpersExample", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormCreationUsingHtmlHelper", "FormCreationUsingHtmlHelper\FormCreationUsingHtmlHelper.csproj", "{78C73BAC-965F-46E1-938B-C24829BCCA59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentApiDemo", "FluentApiDemo\FluentApiDemo.csproj", "{09CB625D-63D1-4F6A-96F2-2391893A1743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentApiDemo", "FluentApiDemo\FluentApiDemo.csproj", "{09CB625D-63D1-4F6A-96F2-2391893A1743}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploadAspNetCore1", "FileUploadAspNetCore1\FileUploadAspNetCore1.csproj", "{946F58A4-32DB-48E1-98DE-BD8F218EB94A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploadAspNetCore2", "FileUploadAspNetCore2\FileUploadAspNetCore2.csproj", "{D6C1EBBE-DDC4-4833-B8A0-4EB2A4172D76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -247,6 +251,14 @@ Global
 		{09CB625D-63D1-4F6A-96F2-2391893A1743}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09CB625D-63D1-4F6A-96F2-2391893A1743}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09CB625D-63D1-4F6A-96F2-2391893A1743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{946F58A4-32DB-48E1-98DE-BD8F218EB94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946F58A4-32DB-48E1-98DE-BD8F218EB94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946F58A4-32DB-48E1-98DE-BD8F218EB94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946F58A4-32DB-48E1-98DE-BD8F218EB94A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C1EBBE-DDC4-4833-B8A0-4EB2A4172D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C1EBBE-DDC4-4833-B8A0-4EB2A4172D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C1EBBE-DDC4-4833-B8A0-4EB2A4172D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C1EBBE-DDC4-4833-B8A0-4EB2A4172D76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

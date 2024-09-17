@@ -1,8 +1,8 @@
-﻿using FileUploadAspNetCore2.Models;
+﻿using FileUploadImageDisplayAspNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.IO;
 
-namespace FileUploadAspNetCore2.Controllers
+namespace FileUploadImageDisplayAspNetCore.Controllers
 {
     public class FileUploadController : Controller
     {
@@ -106,83 +106,6 @@ namespace FileUploadAspNetCore2.Controllers
 
             return fileData;
         }
-
-        //Demonstrating Image Display by getting images from DB
-
-        // 1. Retrieve Images data in controller from DB
-        public async Task<IActionResult> ShowImages()
-        {
-            EFCoreDbContext _context = new EFCoreDbContext();
-
-            //assume Files is DbSet of images
-            var images = await _context.Files.ToListAsync();
-            return View(images);
-        }
-
-        // 2. Create Action method to serve Images
-        //if [Route("FileUpload/GetImages")]
-        //https://localhost:44351/FileUpload/GetImages?id=1
-
-        //if [Route("FileUpload/GetImages/{id}")]
-        //https://localhost:44351/FileUpload/GetImages/1
-        [Route("FileUpload/GetImages/{id}")]
-        public async Task<IActionResult> GetImages(int id)
-        {
-            EFCoreDbContext _context = new EFCoreDbContext();
-            var image = await _context.Files.FirstOrDefaultAsync(x => x.Id == id);
-
-            if(image == null)
-            {
-                return NotFound();
-            }
-
-            return File(image.Data, image.ContentType);
-        }
-
-        // 3. Display Images in View => go to ShowImages.cshtml in Views/FileUpload
-
-        //Displaying all images from folder
-        public IActionResult ShowImagesFromFolder()
-        {
-            //Get folder path where images are present
-            var imageFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
-
-            //Get the File Path
-            var imageFileNames = Directory.EnumerateFiles(imageFolder).Select(x => Path.GetFileName(x));
-
-            //Return all the Images to the view
-            return View(imageFileNames);
-        }
-
-        //DELETE images
-        [HttpPost]
-        public async Task<IActionResult> DeleteImage(int id)
-        {
-            //check whether id is present in DB
-            EFCoreDbContext _context = new EFCoreDbContext();
-
-            var image = await _context.Files.FirstOrDefaultAsync(x => x.Id == id);
-
-            if(image == null)
-            {
-                // Handle the case where the image is not found
-                return NotFound();
-            }
-
-            // Delete the file from the file system
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", image.FileName);
-
-            //if check if filePath exists or not
-            if (System.IO.File.Exists(filePath))
-            {
-                System.IO.File.Delete(filePath);
-            }
-
-            //Delete record from DB
-            _context.Files.Remove(image);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("ShowImages"); // Redirect to the list of images page
-        }
     }
+}
 }
