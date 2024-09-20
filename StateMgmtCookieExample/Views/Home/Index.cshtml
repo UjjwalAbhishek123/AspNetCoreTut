@@ -1,0 +1,48 @@
+﻿@* Access the Cookie Object in a View *@
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Cookie Operations</h2>
+
+<p>@ViewBag.Message</p>
+
+@* button to create cookie *@
+<form method="get" action="/Home/CreateCookie">
+    <button type="submit" class="btn btn-primary">Create Cookies</button>
+</form>
+<br />
+
+@* button to get cookie *@
+<form method="get" action="/Home/GetCookie">
+    <button type="submit" class="btn btn-primary">Get Cookies</button>
+</form>
+<br />
+
+@* Delete Cookie *@
+<form method="get" action="/Home/DeleteCookie">
+    <button type="submit" class="btn btn-primary">Delete Cookies</button>
+</form>
+<br />
+
+@* Conditionally displaying cookie values on clicking *@
+@if(ViewBag.UserId != null && ViewBag.UserName != null)
+{
+    <div class="container">
+        @* <b>UserName: </b>@ViewBag.UserName *@
+        <b>UserName: </b>@HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"]
+        <br />
+
+        @* <b>UserId: </b>@ViewBag.UserId *@
+        <b>UserID: </b>@HttpContextAccessor?.HttpContext?.Request.Cookies["UserId"]
+        <br />
+    </div>
+}
