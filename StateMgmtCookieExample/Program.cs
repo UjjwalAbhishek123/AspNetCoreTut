@@ -6,6 +6,9 @@ builder.Services.AddControllersWithViews();
 //Configuring HttpContextAccessor service
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+// Add Data Protection service
+builder.Services.AddDataProtection();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
