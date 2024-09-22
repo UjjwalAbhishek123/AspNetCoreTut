@@ -95,7 +95,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileHandlingGeneratePDFaspN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateMgmtCookieExample", "StateMgmtCookieExample\StateMgmtCookieExample.csproj", "{F80C55E4-50A2-47DA-8E52-18E2FC25BF61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateMgmtSessionsAspNetCore", "StateMgmtSessionsAspNetCore\StateMgmtSessionsAspNetCore.csproj", "{C72AA76D-AD62-4888-A20D-170F7CA9A901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateMgmtSessionsAspNetCore", "StateMgmtSessionsAspNetCore\StateMgmtSessionsAspNetCore.csproj", "{C72AA76D-AD62-4888-A20D-170F7CA9A901}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
