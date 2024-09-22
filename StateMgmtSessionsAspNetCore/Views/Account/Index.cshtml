@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Welcome, @ViewBag.Username !</h2>
+
+<p><p>You are logged in successfully.</p></p>
+
+
+<form asp-action="Logout" asp-controller="Account" method="post">
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
+
+
+@* <a class="btn btn-primary" asp-controller="Account" asp-action="Logout">Logout</a> *@

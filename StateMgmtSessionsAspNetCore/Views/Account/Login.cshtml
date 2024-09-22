@@ -1,0 +1,32 @@
+﻿@model StateMgmtSessionsAspNetCore.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@* creatng form for login *@
+<h2>Login Page</h2>
+
+<form asp-action="Login" asp-controller="Account" method="post">
+    <div class="form-group">
+        <label asp-for="Username">Username</label>
+        <input type="text" class="form-control mb-3" asp-for="Username" placeholder="Enter username" id="Username" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password">Password</label>
+        <input type="password" class="form-control mb-3" asp-for="Password" id="Password"/>
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div>
+        <button class="btn btn-primary" type="submit">Login</button>
+    </div>
+    
+    <!-- Display error message if login fails -->
+    <p>@ViewBag.Message</p>
+
+    <!-- Display validation summary -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+</form>
