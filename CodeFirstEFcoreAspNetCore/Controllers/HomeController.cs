@@ -13,7 +13,7 @@ namespace CodeFirstEFcoreAspNetCore.Controllers
         //    _logger = logger;
         //}
 
-        //we will use this object to access DbSet
+        //we will use this object to access DbSet(Database Table)
         private readonly StudentDbContext _studentDb;
 
         public HomeController(StudentDbContext studentDb)
@@ -23,7 +23,7 @@ namespace CodeFirstEFcoreAspNetCore.Controllers
 
         public IActionResult Index()
         {
-            //Access Students DbSet
+            //Access Students DbSet as List
             var stdData = _studentDb.Students.ToList();
 
             //pass stdData to view
