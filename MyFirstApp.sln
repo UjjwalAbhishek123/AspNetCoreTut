@@ -101,7 +101,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFirstEFcoreAspNetCore",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseFirstEFcoreAspNetCore", "DatabaseFirstEFcoreAspNetCore\DatabaseFirstEFcoreAspNetCore.csproj", "{C4CDA99D-2B04-48AA-9A93-0D61EBE262D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crudRepositoryPatternAspNetCore", "crudRepositoryPatternAspNetCore\crudRepositoryPatternAspNetCore.csproj", "{978CF638-D752-44FE-A765-E6DA7E6D86DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "crudRepositoryPatternAspNetCore", "crudRepositoryPatternAspNetCore\crudRepositoryPatternAspNetCore.csproj", "{978CF638-D752-44FE-A765-E6DA7E6D86DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDusingAdoNetAspNetCore", "CRUDusingAdoNetAspNetCore\CRUDusingAdoNetAspNetCore.csproj", "{CFB6F91E-B27F-4FE1-B71C-804347A2F318}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +303,10 @@ Global
 		{978CF638-D752-44FE-A765-E6DA7E6D86DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{978CF638-D752-44FE-A765-E6DA7E6D86DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{978CF638-D752-44FE-A765-E6DA7E6D86DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB6F91E-B27F-4FE1-B71C-804347A2F318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB6F91E-B27F-4FE1-B71C-804347A2F318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB6F91E-B27F-4FE1-B71C-804347A2F318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB6F91E-B27F-4FE1-B71C-804347A2F318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
