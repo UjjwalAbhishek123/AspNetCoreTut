@@ -126,7 +126,7 @@ namespace CRUDusingAdoNetAspNetCore.DataAccessLayer
                 con.Open();
 
                 /* 
-                 * ExecuteNonQuery() in scenarios where you are performing operations that change the state of the database but do not need to retrieve any data. 
+                 * ExecuteNonQuery() => in scenarios where you are performing operations that change the state of the database but do not need to retrieve any data. 
                  * This includes:Adding new records (e.g., INSERT). 
                  * Modifying existing records (e.g., UPDATE). 
                  * Removing records (e.g., DELETE). 
